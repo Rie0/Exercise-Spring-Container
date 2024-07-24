@@ -1,14 +1,20 @@
+Only the strings inside println() statements will be printed.
+Most likely input are not the only correct answer but the most likely to print.
+
 ==========================================
 Q1)
-  -One possible output:
+  -One possible output.
 
+Output:
           hey from message1
 
 ===========================================
 Q2) 
- -Two possible outputs(Different order).
- 
-   Most likely output:
+ -One possible output: getMessage1() Before getMessage2()
+
+  Explanation: getMessage2() MUST take a String (data) to execute, in this case the one with "1" qualifier value (getMessage1()).
+
+Output:
 
       hey from message1
       hey from message2
@@ -16,41 +22,59 @@ Q2)
 ==========================================
 
 Q3)
- -Multiple possible outputs(Different orders)
+ -Two possible outputs: getMessage3() Before getMessage2(). With getMessage1() coming either before and after them.
 
-  Most likely output:
+  Explanation: getMessage2() MUST take a String (data) to execute, in this case the one with "3" qualifier value (getMessage3()).
+
+
+  Possible outputs:
 
       hey from message1
-      hey from message2
       hey from message3
+      hey from message2
+--------------------------------
+      hey from message3
+      hey from message2
+      hey from message1
 
 ==========================================
 Q4)
- -Multiple possible outputs(Different orders), but: hey from message1        ,Are fixed together.
-                                                    hey from main controller
-  Most likely output:
+ -Two possible outputs: getMessage3() Before getMessage2(). And getMessage1() before MainController().
+
+   Explanation: 
+               1- getMessage2() MUST take a String (data) to execute, in this case the one with "3" qualifier value (getMessage3()).
+               2- MainController() MUST take a String (data) to execute, in this case the one with "1" qualifier value (getMessage1()). 
+
+                                                              
+  Possible outputs:
 
       hey from message1
       hey from main controller
       hey from message2
       hey from message3
+--------------------------------
+      hey from message2
+      hey from message3
+      hey from message1
+      hey from main controller
 
 ==========================================
 
 Q5)
- -Multiple possible outputs(Different orders), but: hey from message2        ,Are fixed together.
-                                                    hey from main controller
+ -Two possible outputs: getMessage3() Before getMessage2(). And MainController() before getMessage2(). And with getMessage1() coming first Or last.
 
-  Most likely output:
+   Explanation: 
+               1- MainController() MUST take a String (data) to execute, in this case the one with "2" qualifier value (getMessage2()).
+               2- getMessage2() MUST take a String (data) to execute, in this case the one with "3" qualifier value (getMessage3()). 
 
-      hey from message1
+
+   Possible outputs:
+      hey from message3 
       hey from message2
       hey from main controller
-      hey from message3
-
-  or just as likely:
-
+      hey from message1    
+--------------------------------
+      hey from message1
+      hey from message3 
       hey from message2
       hey from main controller
-      hey from message1
-      hey from message3
