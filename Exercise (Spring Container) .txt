@@ -6,7 +6,7 @@ Output:
 
 ===========================================
 Q2) 
- -One possible output: getMessage1() Before getMessage2()
+ -One possible output: getMessage1() Always Before getMessage2()
 
   Explanation: getMessage2() MUST take a String (data) to execute, in this case the one with "1" qualifier value (getMessage1()).
 
@@ -18,7 +18,7 @@ Output:
 ==========================================
 
 Q3)
- -Two possible outputs: getMessage3() Before getMessage2(). With getMessage1() coming either before and after them.
+ -Two possible outputs: getMessage3() Always getMessage2(). With getMessage1() coming either before and after them.
 
   Explanation: getMessage2() MUST take a String (data) to execute, in this case the one with "3" qualifier value (getMessage3()).
 
@@ -35,7 +35,7 @@ Q3)
 
 ==========================================
 Q4)
- -Two possible outputs: getMessage3() Before getMessage2(). And getMessage1() before MainController().
+ -Two possible outputs: getMessage3() Always Before getMessage2(). And getMessage1() Always Before MainController().
 
    Explanation: 
                1- getMessage2() MUST take a String (data) to execute, in this case the one with "3" qualifier value (getMessage3()).
@@ -57,7 +57,7 @@ Q4)
 ==========================================
 
 Q5)
- -Two possible outputs: getMessage3() Before getMessage2(). And MainController() before getMessage2(). And with getMessage1() coming first Or last.
+ -Two possible outputs: getMessage3() Always Before getMessage2(). And MainController() Always Before getMessage2(). And with getMessage1() coming first Or last.
 
    Explanation: 
                1- MainController() MUST take a String (data) to execute, in this case the one with "2" qualifier value (getMessage2()).
