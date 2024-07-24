@@ -1,7 +1,3 @@
-Only the strings inside println() statements will be printed.
-Most likely input are not the only correct answer but the most likely to print.
-
-==========================================
 Q1)
   -One possible output.
 
