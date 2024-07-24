@@ -1,0 +1,56 @@
+==========================================
+Q1)
+  -One possible output:
+
+          hey from message1
+
+===========================================
+Q2) 
+ -Two possible outputs(Different order).
+ 
+   Most likely output:
+
+      hey from message1
+      hey from message2
+
+==========================================
+
+Q3)
+ -Multiple possible outputs(Different orders)
+
+  Most likely output:
+
+      hey from message1
+      hey from message2
+      hey from message3
+
+==========================================
+Q4)
+ -Multiple possible outputs(Different orders), but: hey from message1        ,Are fixed together.
+                                                    hey from main controller
+  Most likely output:
+
+      hey from message1
+      hey from main controller
+      hey from message2
+      hey from message3
+
+==========================================
+
+Q5)
+ -Multiple possible outputs(Different orders), but: hey from message2        ,Are fixed together.
+                                                    hey from main controller
+
+  Most likely output:
+
+      hey from message1
+      hey from message2
+      hey from main controller
+      hey from message3
+
+  or just as likely:
+
+      hey from message2
+      hey from main controller
+      hey from message1
+      hey from message3
